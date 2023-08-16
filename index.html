@@ -4,107 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <input type="date" id="myDate" onchange="getDate()">
-
-<script>
-function getDate() {
-  var myDate = document.getElementById("myDate");
-  var selectedDate = myDate.value;
-  console.log(selectedDate); // Output the selected date in the console
-  
-  let abcDate = new Date(selectedDate)
-  let compare =  Date.now() - abcDate.getTime()
-
-  console.log(Math.floor(compare/1000))
-
-}
-</script> -->
-
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Advanced Calculator with History</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .container {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    h2 {
-      text-align: center;
-      color: #333333;
-    }
-    
-    .calculator {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 10px;
-      margin-top: 20px;
-    }
-    
-    .calculator button {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      background-color: #f9f9f9;
-      color: #333333;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-    }
-    
-    .calculator button:hover {
-      background-color: #e9e9e9;
-    }
-    
-    .calculator button.operator {
-      background-color: #ff7f50;
-      color: #ffffff;
-    }
-    
-    .calculator button.operator:hover {
-      background-color: #e5633a;
-    }
-    
-    .result {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #f9f9f9;
-      color: #333333;
-      font-size: 20px;
-      text-align: right;
-    }
-    
-    .history {
-      margin-top: 20px;
-    }
-    
-    .history-heading {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    
-    .history-item {
-      margin-bottom: 5px;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -136,64 +42,6 @@ function getDate() {
     </div>
   </div>
 
-  <script>
-    var resultElement = document.getElementById("result");
-    var historyList = document.getElementById("historyList");
-    var result = "0";
-
-    function clearResult() {
-      result = "0";
-      updateResult();
-    }
-
-    function deleteLastCharacter() {
-      if (result.length === 1) {
-        result = "0";
-      } else {
-        result = result.slice(0, -1);
-      }
-      updateResult();
-    }
-
-    function appendCharacter(character) {
-      if (result === "0") {
-        result = character;
-      } else {
-        result += character;
-      }
-      updateResult();
-    }
-
-    function calculateResult() {
-      try {
-        var expression = result;
-        result = eval(result).toString();
-        updateResult();
-        addToHistory(expression + " = " + result);
-      } catch (error) {
-        result = "Error";
-        updateResult();
-      }
-    }
-
-    function updateResult() {
-      resultElement.innerText = result;
-    }
-
-    function addToHistory(expression) {
-      var listItem = document.createElement("li");
-      listItem.innerText = expression;
-      historyList.appendChild(listItem);
-    }
-  </script>
-</body>
-</html>
-
-
-
-
-
-
-
+  <script src="script.js"></script>
 </body>
 </html>
